@@ -177,17 +177,23 @@ def get_image(name, poke_id):
 pokemons, battles, wins = load_data()
 
 # --- HEADER (TITULO + ETL) ---
+# --- HEADER (TITULO + ETL) ---
 c_head1, c_head2 = st.columns([3, 1])
 with c_head1:
     st.subheader("Teste Técnico Pokémon - Kaizen (Analista de Dados Júnior)")
 with c_head2:
     if st.button("🔄 Atualizar Dados (ETL)", type="primary"):
-        with st.spinner("Processando dados (isso pode levar alguns instantes)..."):
-            import os
-            os.system("python etl_kaizen.py")
-            st.cache_data.clear()
-        st.success("Dados atualizados com sucesso!")
+        st.session_state['run_etl'] = True
         st.rerun()
+
+if st.session_state.get('run_etl'):
+    with st.spinner("Processando dados (isso pode levar alguns instantes)..."):
+        import os
+        os.system("python etl_kaizen.py")
+        st.cache_data.clear()
+        st.session_state['run_etl'] = False
+    st.success("Dados atualizados com sucesso!")
+    st.rerun()
 
 st.divider()
 
