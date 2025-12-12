@@ -106,6 +106,16 @@ Se desejar apenas processar os dados e gerar os arquivos CSV na pasta `data/`:
 python etl_kaizen.py
 ```
 
+### Opção C: Dashboard Executivo (Power BI)
+
+Para visualizar os dados no modelo Enterprise (arquivo `.pbix`):
+
+1.  Certifique-se de ter executado o script de ETL ao menos uma vez (para gerar a pasta `data/`).
+2.  Baixe e instale o **Microsoft Power BI Desktop** (gratuito).
+3.  Abra o arquivo `Kaizen-dashboard.pbix` presente na raiz do projeto.
+4.  Clique em **"Atualizar"** na barra de ferramentas superior para carregar os dados mais recentes dos CSVs.
+
+
 ---
 
 ## 📂 Estrutura do Projeto
