@@ -22,11 +22,16 @@ Este projeto tem como objetivo demonstrar competências em **Engenharia de Dados
     *   Tratamento de erros e retentativas (“Retry”) para instabilidade de rede.
     *   Cálculo automático de KPIs (Rankings, Taxas de Vitória).
 
-2.  **Dashboard Premium (`app.py`)**:
+2.  **Dashboard (`app.py`)**:
     *   Interface desenvolvida em **Streamlit** com CSS customizado (Glassmorphism).
     *   Visualização de métricas em tempo real.
     *   **Botão de ETL Integrado**: Permite rodar o pipeline de dados diretamente pela interface.
     *   Análise individual por Pokémon (Status, Fraquezas, Histórico).
+
+3.  **Visualização Enterprise (`Kaizen-dashboard.pbix`)**:
+    *   Dashboard complementar desenvolvido em **Microsoft Power BI**.
+    *   Ideal para análise executiva e apresentações corporativas.
+    *   Consome os mesmos arquivos CSV gerados pelo processo de ETL.
 
 ---
 
@@ -113,6 +118,7 @@ Teste-Kaizen/
 ├── .env                # Arquivo de configurações (NÃO COMITAR)
 ├── .gitignore          # Arquivos ignorados pelo Git
 ├── README.md           # Documentação do projeto
+├── Kaizen-dashboard.pbix # Dashboard Power BI (Enterprise)
 └── data/               # Diretório onde os CSVs são salvos (gerado automaticamente)
     ├── batalhas.csv
     ├── pokemons.csv
@@ -129,4 +135,4 @@ Teste-Kaizen/
 
 ---
 
-Made with 💜 and Python.
+Made with 💜 and Python. Dev Paulo Eduardo
